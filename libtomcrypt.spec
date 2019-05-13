@@ -1,6 +1,7 @@
 Name:           libtomcrypt
 Version:        1.18.2
-Release:        3%{?dist}
+#Release:        3%%{?dist}
+Release:        0%{?dist}
 Summary:        A comprehensive, portable cryptographic toolkit
 License:        Public Domain or WTFPL
 URL:            http://www.libtom.net/
@@ -12,6 +13,7 @@ BuildRequires:  libtommath-devel >= 1.0
 BuildRequires:  libtool
 BuildRequires:  texlive-latex-bin-bin
 BuildRequires:  texlive-makeindex-bin
+BuildRequires:  texlive-metafont
 BuildRequires:  texlive-mfware-bin
 BuildRequires:  tex(cmr10.tfm)
 BuildRequires:  tex(fancyhdr.sty)
@@ -94,6 +96,9 @@ sed -i \
 %doc doc/crypt.pdf
 
 %changelog
+* Mon May 13 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.18.2-0
+- Add texlive-metafont for RHEL 8 to get /usr/bin/mf
+
 * Fri Feb 01 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.18.2-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
