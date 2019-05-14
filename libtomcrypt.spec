@@ -13,7 +13,9 @@ BuildRequires:  libtommath-devel >= 1.0
 BuildRequires:  libtool
 BuildRequires:  texlive-latex-bin-bin
 BuildRequires:  texlive-makeindex-bin
+%if 0%{?rhel} == 8
 BuildRequires:  texlive-metafont
+%endif
 BuildRequires:  texlive-mfware-bin
 BuildRequires:  tex(cmr10.tfm)
 BuildRequires:  tex(fancyhdr.sty)
