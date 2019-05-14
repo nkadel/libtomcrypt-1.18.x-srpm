@@ -3,7 +3,8 @@ libtomcrypt-1.18.x-srpm
 
 SRPM building tools for libtomcrypt runing Samba 4 on RHEL 8.
 
-This tool taken from the EPEL 7 release.
+This tool taken from the EPEL 7 release. It had to be modified to
+exclude building certain documents due to tetex failurs on RHEL 8.
 
 The "make" command will do these steps.
 
