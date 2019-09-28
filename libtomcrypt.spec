@@ -8,7 +8,7 @@ URL:            http://www.libtom.net/
 
 Source0:        https://github.com/libtom/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 
-%if (0%{?rhel} > 0 && 0%{?rhel} <= 7)
+%if 0%{?rhel} > 0
 # Addresses python36- versus python3- dependencies
 BuildRequires: epel-rpm-macros
 %endif
