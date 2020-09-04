@@ -1,17 +1,12 @@
 Name:           libtomcrypt
 Version:        1.18.2
 #Release:        3%%{?dist}
-Release:        0%{?dist}
+Release:        0.1%{?dist}
 Summary:        A comprehensive, portable cryptographic toolkit
 License:        Public Domain or WTFPL
 URL:            http://www.libtom.net/
 
 Source0:        https://github.com/libtom/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
-
-%if 0%{?rhel} > 0
-# Addresses python36- versus python3- dependencies
-BuildRequires: epel-rpm-macros
-%endif
 
 BuildRequires:  ghostscript
 BuildRequires:  libtommath-devel >= 1.0
@@ -103,6 +98,9 @@ sed -i \
 %doc doc/crypt.pdf
 
 %changelog
+* Sat Sep 5 2020 Nico Kadel-Garcia <nkadel@gmail.com> - 0.18.2-0.1
+- Discard BuildRequires for epel-rpm-macros 
+
 * Mon May 13 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.18.2-0
 - Add texlive-metafont for RHEL 8 to get /usr/bin/mf
 
